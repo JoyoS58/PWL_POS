@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('barang_id')->index(); //untuk foreignkey
             $table->unsignedBigInteger('user_id')->index(); //untuk foreignkey
             $table->dateTime('stok_tanggal');
+            $table->integer('stok_jumlah');
             $table->timestamps();
 
             // Mendefinisikan foreignkey
