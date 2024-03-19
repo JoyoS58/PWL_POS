@@ -14,4 +14,5 @@ class UserModel extends Model
     // @var array
 
     protected $fillable = ['level_id', 'username', 'nama', 'password']; //jika password di hapus maka akan terjadi eroor
+    // protected $guarded;
 }
