@@ -28,12 +28,22 @@
             <td>{{$data->nama}}</td>
             <td>{{$data->level_id}}</td> --}}
         {{-- praktikum 2.4 jobsheet 4 --}}
+        {{-- <tr>
+            <td>{{$data->user_id}}</td>
+            <td>{{$data->username}}</td>
+            <td>{{$data->nama}}</td>
+            <td>{{$data->level_id}}</td>
+        </tr> --}}
+        {{-- praktikum 2.6 --}}
+        @foreach ($data as $d)
         <tr>
             <td>{{$data->user_id}}</td>
             <td>{{$data->username}}</td>
             <td>{{$data->nama}}</td>
             <td>{{$data->level_id}}</td>
+            <td><a href={{route('/user/ubah',$d->user_id)}}>Ubah</a> | <a href={{route('/user/hapus',$d->user_id)}}>Hapus</a></td>
         </tr>
+        @endforeach
     </table>
 </body>
 </html>
