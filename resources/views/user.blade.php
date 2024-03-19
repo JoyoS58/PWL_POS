@@ -23,10 +23,17 @@
             <td>{{$d->level_id}}</td>
         </tr>
         @endforeach --}}
-        <td>{{$data->user_id}}</td>
+        {{-- <td>{{$data->user_id}}</td>
+            <td>{{$data->username}}</td>
+            <td>{{$data->nama}}</td>
+            <td>{{$data->level_id}}</td> --}}
+        {{-- praktikum 2.4 jobsheet 4 --}}
+        <tr>
+            <td>{{$data->user_id}}</td>
             <td>{{$data->username}}</td>
             <td>{{$data->nama}}</td>
             <td>{{$data->level_id}}</td>
+        </tr>
     </table>
 </body>
 </html>
