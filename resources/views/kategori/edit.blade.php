@@ -16,12 +16,12 @@
                 @method('PUT')
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="kodeKategori">Kode Kategori</label>
-                        <input type="text" class="form-control" id="kodeKategori" name="kodeKategori" value="{{ $data->kategori_kode }}">
+                        <label for="kategori_kode">Kode Kategori</label>
+                        <input type="text" class="form-control" id="kategori_kode" name="kategori_kode" value="{{ $data->kategori_kode }}">
                     </div>
                     <div class="form-group">
-                        <label for="namaKategori">Nama Kategori</label>
-                        <input type="text" class="form-control" id="namaKategori" name="namaKategori" value="{{ $data->kategori_nama }}">
+                        <label for="kategori_nama">Nama Kategori</label>
+                        <input type="text" class="form-control" id="kategori_nama" name="kategori_nama" value="{{ $data->kategori_nama }}">
                     </div>
                 </div>
                 <div class="card-footer">

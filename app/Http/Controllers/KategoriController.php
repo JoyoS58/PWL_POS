@@ -77,7 +77,7 @@ class KategoriController extends Controller
     //     $validated = $request->validate([
     //         'kategori_kode' => 'bail|required|unique:posts|max:10',
     //         'kategori_nama' => 'required',
-    //         // 'created_at' => now()
+    //         'created_at' => now()
     //     ]);
     //     return redirect('/kategori');
     // }
@@ -90,8 +90,10 @@ class KategoriController extends Controller
     {
         $kategori = m_kategori::find($id);
 
-        $kategori->kategori_kode = $request->kodeKategori;
-        $kategori->kategori_nama = $request->namaKategori;
+        // $kategori->kategori_kode = $request->kodeKategori;
+        // $kategori->kategori_nama = $request->namaKategori;
+
+        $kategori->update($request->all());
 
         $kategori->save();
 
