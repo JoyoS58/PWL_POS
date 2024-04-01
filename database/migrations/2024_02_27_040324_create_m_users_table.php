@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\m_level;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,8 +14,8 @@ return new class extends Migration
     //     Schema::create('m_users', function (Blueprint $table) {
     //         $table->id('user_id');
     //         $table->unsignedBigInteger('level_id')->index();
-    //         $table->string('username',20)->unique();
-    //         $table->string('nama',100);
+    //         $table->string('username', 20)->unique();
+    //         $table->string('nama', 100);
     //         $table->string('password');
     //         $table->timestamps();
 
@@ -27,25 +26,22 @@ return new class extends Migration
     {
         Schema::create('useri', function (Blueprint $table) {
             $table->id('user_id');
-            $table->unsignedBigInteger('level_id')->index;
+            $table->unsignedBigInteger('level_id')->index();
             $table->string('username', 20)->unique();
             $table->string('nama', 100);
             $table->string('password');
             $table->timestamps();
-            $table->foreign('level_id')->references('level_id')->on('m_level');
+
+            $table->foreign('level_id')->references('level_id')->on('m_levels');
         });
     }
 
     /**
      * Reverse the migrations.
      */
-    // public function down(): void
-    // {
-    //     Schema::dropIfExists('m_users');
-    // }
     public function down(): void
     {
+        // Schema::dropIfExists('m_users');
         Schema::dropIfExists('useri');
     }
-
 };

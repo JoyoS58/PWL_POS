@@ -1,51 +1,47 @@
-@extends('layouts.app')
-{{-- Customize layout section --}}
-@section('subtitle','Kategori')
-@section('content_header_title','Kategori')
-@section('content_header_subtitle','Create')
-{{-- Content body: main page content --}}
+@extends('layout.app')
+@section('subtitle', 'Kategori')
+@section('content_header_title', 'Kategori')
+@section('content_header_subtitle', 'Create')
+
 @section('content')
     <div class="container">
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">Buat Kategori Baru</h3>
+                <h3 class="card-title">Buat kategori baru</h3>
             </div>
 
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
-            <form method="POST" action="../kategori">
+            <form action="../kategori" method="post">
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="kategori_kode">Kode Kategori</label>
-                        <input id="kategori_kode" type="text" name="kategori_kode" class="@error('kategori_kode')
-                            is-invalid
-                        @enderror">
-                        @error('kategori_kode')
-                            <div class="alert alert-danger">{{ $message}}</div>
+                        <label for="kodeKategori">Kode Kategori</label>
+                        <input type="text" name="kodeKategori" id="kodeKategori" class="form-control @error('kodeKategori') is-invalid @enderror" placeholder="untuk makanan, contoh MKN">
+
+                        @error('kodeKategori')
+                            <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="kategori_nama">Nama Kategori</label>
-                        <input id="kategori_nama" type="text" name="kategori_nama" class="@error('kategori_nama')
-                            is-invalid
-                        @enderror">
-                        @error('kategori_nama')
-                            <div class="alert alert-danger">{{ $message}}</div>
+                        <label for="namaKategori">Nama Kategori</label>
+                        <input type="text" name="namaKategori" id="namaKategori" class="form-control @error('namaKategori') is-invalid @enderror" placeholder="nama">
+                        @error('namaKategori')
+                            <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
+
                 <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>
     </div>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                {{-- @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach --}}
+            </ul>
+        </div>
+    @endif
 @endsection
