@@ -1,3 +1,18 @@
+@extends('layout.template')
+
+@section('content')
+
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Halo, apakabar!!!</h3>
+    <div class="card-tools"></div>
+  </div>
+  <div class="card-body">
+    Selamat Datang Semua, Ini adalah halaman utama dari aplikasi ini
+  </div>
+</div>
+@endsection
+
 {{-- <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +25,17 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('template/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{{ asset('template/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+  <link rel="stylesheet" href="{{asset('template/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('template/dist/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{asset('template/dist/css/adminlte.min.css')}}">
+  
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__wobble" src="{{ asset('template/dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__wobble" src="{{ asset('template/dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
@@ -71,7 +87,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="{{ asset('template/dist/img/user1-128x128.jpg') }}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="{{asset('template/dist/img/user1-128x128.jpg')}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -87,7 +103,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="{{ asset('template/dist/img/user8-128x128.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="{{asset('template/dist/img/user8-128x128.jpg')}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -103,7 +119,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="{{ asset('template/dist/img/user3-128x128.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="{{asset('template/dist/img/user3-128x128.jpg')}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -164,7 +180,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="{{ asset('template/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="{{asset('template/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
@@ -173,7 +189,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{ asset('template/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('template/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
@@ -1141,7 +1157,7 @@
                           <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                         </div>
                         <!-- /.direct-chat-infos -->
-                        <img class="direct-chat-img" src="{{ asset('template/dist/img/user1-128x128.jpg') }}" alt="message user image">
+                        <img class="direct-chat-img" src="{{asset('template/dist/img/user1-128x128.jpg')}}" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
                           Is this template really for free? That's unbelievable!
@@ -1157,7 +1173,7 @@
                           <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                         </div>
                         <!-- /.direct-chat-infos -->
-                        <img class="direct-chat-img" src="{{ asset('template/dist/img/user3-128x128.jpg')}}" alt="message user image">
+                        <img class="direct-chat-img" src="{{asset('template/dist/img/user3-128x128.jpg')}}" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
                           You better believe it!
@@ -1173,7 +1189,7 @@
                           <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                         </div>
                         <!-- /.direct-chat-infos -->
-                        <img class="direct-chat-img" src="{{ asset('template/dist/img/user1-128x128.jpg')}}" alt="message user image">
+                        <img class="direct-chat-img" src="{{asset('template/dist/img/user1-128x128.jpg')}}" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
                           Working with AdminLTE on a great new app! Wanna join?
@@ -1189,7 +1205,7 @@
                           <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                         </div>
                         <!-- /.direct-chat-infos -->
-                        <img class="direct-chat-img" src="{{ asset('template/dist/img/user3-128x128.jpg')}}" alt="message user image">
+                        <img class="direct-chat-img" src="{{asset('template/dist/img/user3-128x128.jpg')}}" alt="message user image">
                         <!-- /.direct-chat-img -->
                         <div class="direct-chat-text">
                           I would love to.
@@ -1206,7 +1222,7 @@
                       <ul class="contacts-list">
                         <li>
                           <a href="#">
-                            <img class="contacts-list-img" src="{{ asset('template/dist/img/user1-128x128.jpg')}}" alt="User Avatar">
+                            <img class="contacts-list-img" src="{{asset('template/dist/img/user1-128x128.jpg')}}" alt="User Avatar">
 
                             <div class="contacts-list-info">
                               <span class="contacts-list-name">
@@ -1221,7 +1237,7 @@
                         <!-- End Contact Item -->
                         <li>
                           <a href="#">
-                            <img class="contacts-list-img" src="{{ asset('template/dist/img/user7-128x128.jpg')}}" alt="User Avatar">
+                            <img class="contacts-list-img" src="{{asset('template/dist/img/user7-128x128.jpg')}}" alt="User Avatar">
 
                             <div class="contacts-list-info">
                               <span class="contacts-list-name">
@@ -1236,7 +1252,7 @@
                         <!-- End Contact Item -->
                         <li>
                           <a href="#">
-                            <img class="contacts-list-img" src="{{ asset('template/dist/img/user3-128x128.jpg')}}" alt="User Avatar">
+                            <img class="contacts-list-img" src="{{asset('template/dist/img/user3-128x128.jpg')}}" alt="User Avatar">
 
                             <div class="contacts-list-info">
                               <span class="contacts-list-name">
@@ -1251,7 +1267,7 @@
                         <!-- End Contact Item -->
                         <li>
                           <a href="#">
-                            <img class="contacts-list-img" src="{{ asset('template/dist/img/user5-128x128.jpg')}}" alt="User Avatar">
+                            <img class="contacts-list-img" src="{{asset('template/dist/img/user5-128x128.jpg')}}" alt="User Avatar">
 
                             <div class="contacts-list-info">
                               <span class="contacts-list-name">
@@ -1266,7 +1282,7 @@
                         <!-- End Contact Item -->
                         <li>
                           <a href="#">
-                            <img class="contacts-list-img" src="{{ asset('template/dist/img/user6-128x128.jpg')}}" alt="User Avatar">
+                            <img class="contacts-list-img" src="{{asset('template/dist/img/user6-128x128.jpg')}}" alt="User Avatar">
 
                             <div class="contacts-list-info">
                               <span class="contacts-list-name">
@@ -1281,7 +1297,7 @@
                         <!-- End Contact Item -->
                         <li>
                           <a href="#">
-                            <img class="contacts-list-img" src="{{ asset('template/dist/img/user8-128x128.jpg')}}" alt="User Avatar">
+                            <img class="contacts-list-img" src="{{asset('dist/img/user8-128x128.jpg')}}" alt="User Avatar">
 
                             <div class="contacts-list-info">
                               <span class="contacts-list-name">
@@ -1336,42 +1352,42 @@
                   <div class="card-body p-0">
                     <ul class="users-list clearfix">
                       <li>
-                        <img src="{{ asset('template/dist/img/user1-128x128.jpg')}}" alt="User Image">
+                        <img src="{{asset('template/dist/img/user1-128x128.jpg')}}" alt="User Image">
                         <a class="users-list-name" href="#">Alexander Pierce</a>
                         <span class="users-list-date">Today</span>
                       </li>
                       <li>
-                        <img src="{{ asset('template/dist/img/user8-128x128.jpg')}}" alt="User Image">
+                        <img src="{{asset('template/dist/img/user8-128x128.jpg')}}" alt="User Image">
                         <a class="users-list-name" href="#">Norman</a>
                         <span class="users-list-date">Yesterday</span>
                       </li>
                       <li>
-                        <img src="{{ asset('template/ist/img/user7-128x128.jpg')}}" alt="User Image">
+                        <img src="{{asset('template/dist/img/user7-128x128.jpg')}}" alt="User Image">
                         <a class="users-list-name" href="#">Jane</a>
                         <span class="users-list-date">12 Jan</span>
                       </li>
                       <li>
-                        <img src="{{ asset('template/dist/img/user6-128x128.jpg')}}" alt="User Image">
+                        <img src="{{asset('template/dist/img/user6-128x128.jpg')}}" alt="User Image">
                         <a class="users-list-name" href="#">John</a>
                         <span class="users-list-date">12 Jan</span>
                       </li>
                       <li>
-                        <img src="{{ asset('template/dist/img/user2-160x160.jpg')}}" alt="User Image">
+                        <img src="{{asset('template/dist/img/user2-160x160.jpg')}}" alt="User Image">
                         <a class="users-list-name" href="#">Alexander</a>
                         <span class="users-list-date">13 Jan</span>
                       </li>
                       <li>
-                        <img src="{{ asset('template/dist/img/user5-128x128.jpg')}}" alt="User Image">
+                        <img src="{{asset('template/dist/img/user5-128x128.jpg')}}" alt="User Image">
                         <a class="users-list-name" href="#">Sarah</a>
                         <span class="users-list-date">14 Jan</span>
                       </li>
                       <li>
-                        <img src="{{ asset('template/dist/img/user4-128x128.jpg')}}" alt="User Image">
+                        <img src="{{asset('template/dist/img/user4-128x128.jpg')}}" alt="User Image">
                         <a class="users-list-name" href="#">Nora</a>
                         <span class="users-list-date">15 Jan</span>
                       </li>
                       <li>
-                        <img src="{{ asset('template/dist/img/user3-128x128.jpg')}}" alt="User Image">
+                        <img src="{{asset('template/dist/img/user3-128x128.jpg')}}" alt="User Image">
                         <a class="users-list-name" href="#">Nadia</a>
                         <span class="users-list-date">15 Jan</span>
                       </li>
@@ -1621,7 +1637,7 @@
                 <ul class="products-list product-list-in-card pl-2 pr-2">
                   <li class="item">
                     <div class="product-img">
-                      <img src="{{ asset('template/dist/img/default-150x150.png')}}" alt="Product Image" class="img-size-50">
+                      <img src="{{asset('dist/img/default-150x150.png')}}" alt="Product Image" class="img-size-50">
                     </div>
                     <div class="product-info">
                       <a href="javascript:void(0)" class="product-title">Samsung TV
@@ -1634,7 +1650,7 @@
                   <!-- /.item -->
                   <li class="item">
                     <div class="product-img">
-                      <img src="{{ asset('template/dist/img/default-150x150.png')}}" alt="Product Image" class="img-size-50">
+                      <img src="{{asset('dist/img/default-150x150.png')}}" alt="Product Image" class="img-size-50">
                     </div>
                     <div class="product-info">
                       <a href="javascript:void(0)" class="product-title">Bicycle
@@ -1647,7 +1663,7 @@
                   <!-- /.item -->
                   <li class="item">
                     <div class="product-img">
-                      <img src="{{ asset('template/dist/img/default-150x150.png')}}" alt="Product Image" class="img-size-50">
+                      <img src="{{asset('template/dist/img/default-150x150.png')}}" alt="Product Image" class="img-size-50">
                     </div>
                     <div class="product-info">
                       <a href="javascript:void(0)" class="product-title">
@@ -1663,7 +1679,7 @@
                   <!-- /.item -->
                   <li class="item">
                     <div class="product-img">
-                      <img src="{{ asset('template/dist/img/default-150x150.png')}}" alt="Product Image" class="img-size-50">
+                      <img src="{{asset('template/dist/img/default-150x150.png')}}" alt="Product Image" class="img-size-50">
                     </div>
                     <div class="product-info">
                       <a href="javascript:void(0)" class="product-title">PlayStation 4
@@ -1712,56 +1728,104 @@
 
 <!-- REQUIRED SCRIPTS -->
 <!-- jQuery -->
-<script src="{{ asset('template/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{asset('template/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap -->
-<script src="{{ asset('template/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{asset('template/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- overlayScrollbars -->
-<script src="{{ asset('template/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<script src="{{asset('template/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('template/dist/js/adminlte.js') }}"></script>
+<script src="{{asset('template/dist/js/adminlte.js')}}"></script>
 
 <!-- PAGE PLUGINS -->
 <!-- jQuery Mapael -->
-<script src="{{ asset('template/plugins/jquery-mousewheel/jquery.mousewheel.js') }}"></script>
-<script src="{{ asset('template/plugins/raphael/raphael.min.js') }}"></script>
-<script src="{{ asset('template/plugins/jquery-mapael/jquery.mapael.min.js') }}"></script>
-<script src="{{ asset('template/plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
+<script src="{{asset('template/plugins/jquery-mousewheel/jquery.mousewheel.js')}}"></script>
+<script src="{{asset('template/plugins/raphael/raphael.min.js')}}"></script>
+<script src="{{asset('template/plugins/jquery-mapael/jquery.mapael.min.js')}}"></script>
+<script src="{{asset('template/plugins/jquery-mapael/maps/usa_states.min.js')}}"></script>
 <!-- ChartJS -->
-<script src="{{ asset('template/plugins/chart.js/Chart.min.js') }}"></script>
+<script src="{{asset('template/plugins/chart.js/Chart.min.js')}}"></script>
 
 <!-- AdminLTE for demo purposes -->
-<script src="{{ asset('template/dist/js/demo.js') }}"></script>
+<script src="{{asset('template/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ asset('template/dist/js/pages/dashboard2.js') }}"></script>
+<script src="{{asset('template/dist/js/pages/dashboard2.js')}}"></script>
 </body>
 </html> --}}
-@extends('adminlte::page')
+
+{{-- @extends('adminlte::page')
 @section('title', 'Dashboard')
-
 @section('content_header')
-    <h1>Dashboard</h1>
+<h1>Dashboard</h1>
 @stop
-
 @section('content')
-  <div class="card-body">
-    <form>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label>Level id</label>
-                    <input type="text" class="form-control" placeholder="id">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-info">Submit</button>
-        </div>
-    </form>
-</div>
-@stop
 
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card card-success">
+            <div class="card-header">
+                <h3 class="card-title">Create User</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <!-- text input -->
+                            <div class="form-group">
+                                <label>Level ID</label>
+                                <input type="text" class="form-control" placeholder="level id...">
+                                <label>Username</label>
+                                <input type="text" class="form-control" placeholder="username...">
+                                <label>Nama</label>
+                                <input type="text" class="form-control" placeholder="nama...">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="password...">
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type = "submit" class ="btn btn-primary">Submit </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.card-body -->
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card card-danger">
+            <div class="card-header">
+                <h3 class="card-title">Create level</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <!-- text input -->
+                            <div class="form-group">
+                            <label>Nama Level</label>
+                            <input type="text" class="form-control" placeholder="nama level...">
+                            <label>Kode Level</label>
+                            <input type="text" class="form-control" placeholder="kode level...">
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type = "submit" class ="btn btn-primary">Submit </button>
+                            </div>
+                        </div>
+                        </div>
+                </form>
+            </div>
+            <!-- /.card-body -->
+        </div>
+    </div>
+</div>
+
+@stop
 @section('css')
 {{-- Add here extra stylesheets --}}
 {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
-@stop
+{{-- @stop
 @section('js')
 <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
-@stop
+@stop --}}

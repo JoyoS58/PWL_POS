@@ -2,8 +2,8 @@
 
 namespace App\DataTables;
 
-use App\Models\Level;
-use App\Models\m_level;
+use App\Models\level;
+use App\Models\LevelModel;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -13,7 +13,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-class LevelDataTable extends DataTable
+class levelDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -23,19 +23,14 @@ class LevelDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', function ($data) {
-                return '<div class="btn-group" role="group">'
-                    . '<a href="' . route('kategori.edit', $data->level_id) . '" class="btn btn-sm btn-warning">Edit</a>'
-                    . '<a href="' . route('/kategori/hapus', $data->level_id) . '" class="btn btn-sm btn-danger">Delete</a>'
-                    . '</div>';
-            })
-            ->setRowId('level_id');
+            // ->addColumn('action', 'level.action')
+            ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(m_level $model): QueryBuilder
+    public function query(LevelModel $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -46,21 +41,20 @@ class LevelDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-            ->setTableId('level-table')
-            ->columns($this->getColumns())
-            ->minifiedAjax()
-            //->dom('Bfrtip')
-            ->orderBy(1)
-            ->selectStyleSingle()
-            ->buttons([
-                Button::make('excel'),
-                Button::make('csv'),
-                Button::make('pdf'),
-                Button::make('print'),
-                Button::make('reset'),
-                Button::make('reload'),
-                Button::make('add')
-            ]);
+                    ->setTableId('level-table')
+                    ->columns($this->getColumns())
+                    ->minifiedAjax()
+                    //->dom('Bfrtip')
+                    ->orderBy(1)
+                    ->selectStyleSingle()
+                    ->buttons([
+                        Button::make('excel'),
+                        Button::make('csv'),
+                        Button::make('pdf'),
+                        Button::make('print'),
+                        Button::make('reset'),
+                        Button::make('reload')
+                    ]);
     }
 
     /**
@@ -69,16 +63,16 @@ class LevelDataTable extends DataTable
     public function getColumns(): array
     {
         return [
+            // Column::computed('action')
+            //       ->exportable(false)
+            //       ->printable(false)
+            //       ->width(60)
+            //       ->addClass('text-center'),
             Column::make('level_id'),
             Column::make('level_kode'),
             Column::make('level_nama'),
             Column::make('created_at'),
             Column::make('updated_at'),
-            Column::computed('action')
-                ->exportable(false)
-                ->printable(false)
-                ->width(60)
-                ->addClass('text-center')
         ];
     }
 
@@ -87,6 +81,6 @@ class LevelDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Level_' . date('YmdHis');
+        return 'level_' . date('YmdHis');
     }
 }

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>Data Level Pengguna</title>
 </head>
@@ -12,9 +13,9 @@
         </tr>
         @foreach ($data as $d)
             <tr>
-                <td>{{ $d->level_id}}</td>
-                <td>{{ $d->level_kode}}</td>
-                <td>{{ $d->level_nama}}</td>
+                <td>{{ $d->level_id }}</td>
+                <td>{{ $d->level_kode }}</td>
+                <td>{{ $d->level_nama }}</td>
             </tr>
         @endforeach
     </table>

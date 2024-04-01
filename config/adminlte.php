@@ -257,7 +257,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'welcome',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -322,21 +322,6 @@ return [
             'label' => 4,
             'label_color' => 'success',
         ],
-        [
-            'text' => 'Kategori',
-            'url' => 'kategori',
-            'icon' => 'fas fa-tag',
-        ],
-        [
-            'text' => 'User',
-            'url' => 'm_user',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'Level',
-            'url' => 'level/create',
-            'icon' => 'fas fa-user-shield',
-        ],
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
@@ -347,6 +332,21 @@ return [
             'text' => 'change_password',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+        ],
+        [   
+            'text' => 'Kategori',
+            'url' => 'kategori',
+            'icon' => 'fa fa-solid fa-list'
+        ],
+        [   
+            'text' => 'User',
+            'url' => 'user',
+            'icon' => 'fa fa-solid fa-list'
+        ],
+        [   
+            'text' => 'Level',
+            'url' => 'level',
+            'icon' => 'fa fa-solid fa-list'
         ],
         [
             'text' => 'multilevel',
