@@ -43,6 +43,6 @@ class KategoriSeeder extends Seeder
                 'kategori_nama' => 'Asesoris',
             ],
         ];
-        DB::table('m_kategori')->insert($data);
+        DB::table('m_kategoris')->insert($data);
     }
 }

@@ -87,6 +87,6 @@ class PenjualanSeeder extends Seeder
                 'penjualan_tanggal' => '2024-02-27 19:15:00',
             ]
         ];
-        DB::table('t_penjualan')->insert($data);
+        DB::table('t_penjualans')->insert($data);
     }
 }

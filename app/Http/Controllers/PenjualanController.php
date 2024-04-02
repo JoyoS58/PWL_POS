@@ -80,7 +80,7 @@ class PenjualanController extends Controller
         $request->validate([
             'user_id' => 'required|integer',
             'pembeli' => 'required|string|max:100',
-            'penjualan_kode' => 'required|string|unique:t_penjualan,penjualan_kode',
+            'penjualan_kode' => 'required|string|unique:t_penjualans,penjualan_kode',
             'penjualan_tanggal' => 'required|date',
             'barang_id' => 'required|integer',
             'jumlah' => 'required|integer',
